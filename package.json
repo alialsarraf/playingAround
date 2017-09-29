@@ -11,8 +11,8 @@
     "demo"
   ],
   "author": "Ali Al-Sarraf",
-  "license": "ISC",
-  "dependencies": {    
+  "license": "MIT",
+  "dependencies": {
   },
   "devDependencies": {
     "babel-cli": "6.16.0",
