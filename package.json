@@ -4,9 +4,9 @@
   "description": "Plursight Webserver course and playing around.",
   "main": "index.js",
   "scripts": {
-    "prestart" : "node buildScripts/startMessage.js",
+    "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all -s --parallel security-check open:src localtunnel",
-    "open:src": "node buildScripts/srcServer.js",
+    "open:src": "babel-node buildScripts/srcServer.js",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel open:src localtunnel"
@@ -17,7 +17,8 @@
   ],
   "author": "Ali Al-Sarraf",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "babel-cli": "6.16.0",
     "babel-core": "6.17.0",
@@ -35,6 +36,7 @@
     "eslint-watch": "2.1.14",
     "express": "4.14.0",
     "extract-text-webpack-plugin": "1.0.1",
+    "file-loader": "^1.1.5",
     "html-webpack-plugin": "2.22.0",
     "jsdom": "9.8.0",
     "json-schema-faker": "0.3.6",
